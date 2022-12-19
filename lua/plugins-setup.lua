@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-surround') -- Surrond like vs-code
   use('vim-scripts/ReplaceWithRegister') -- Use register for replacement grw
   use('numToStr/Comment.nvim') -- Comment line
+  use('kyazdani42/nvim-web-devicons') -- Icons
   
   if packer_bootstrap then
     require('packer').sync()
