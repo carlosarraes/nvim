@@ -3,6 +3,7 @@ local keymap = vim.keymap
 
 -- General
 keymap.set('i', 'jk', '<ESC>')
+keymap.set('n', '<C-s>', ':w<CR>')
 keymap.set('n', '<leader>nh', ':nohl<CR>')
 keymap.set("n", "x", '"_x')
 
@@ -20,3 +21,14 @@ keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+
+-- QoL
+keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+keymap.set('n', 'J', 'mzJ`z')
+keymap.set('n', '<C-d>', '<C-d>zz')
+keymap.set('n', '<C-u>', '<C-u>zz')
+keymap.set('n', 'n', 'nzzzv')
+keymap.set('n', 'N', 'Nzzzv')
+keymap.set('n', '<leader>p', 'cw<C-r>0<ESC>')
+keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
