@@ -20,7 +20,8 @@ vim.cmd([[
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
+  use('wbthomason/packer.nvim')
+  use('nvim-lua/plenary.nvim')
 
   -- Theme
   use('bluz71/vim-nightfly-guicolors')
@@ -30,9 +31,10 @@ return require('packer').startup(function(use)
   use('szw/vim-maximizer')
 
   -- Essentials
-  use('tpope/vim-surround')
-  use('vim-scripts/ReplaceWithRegister')
-
+  use('tpope/vim-surround') -- Surrond like vs-code
+  use('vim-scripts/ReplaceWithRegister') -- Use register for replacement grw
+  use('numToStr/Comment.nvim') -- Comment line
+  
   if packer_bootstrap then
     require('packer').sync()
   end
