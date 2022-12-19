@@ -22,7 +22,16 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  use("bluz71/vim-nightfly-guicolors") -- theme
+  -- Theme
+  use('bluz71/vim-nightfly-guicolors')
+
+  -- Tmux & window navigation
+  use('christoomey/vim-tmux-navigator')
+  use('szw/vim-maximizer')
+
+  -- Essentials
+  use('tpope/vim-surround')
+  use('vim-scripts/ReplaceWithRegister')
 
   if packer_bootstrap then
     require('packer').sync()
