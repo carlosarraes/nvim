@@ -36,6 +36,9 @@ return require('packer').startup(function(use)
   use('numToStr/Comment.nvim') -- Comment line
   use('kyazdani42/nvim-web-devicons') -- Icons
   
+  -- Lualine
+  use('nvim-lualine/lualine.nvim')
+  
   if packer_bootstrap then
     require('packer').sync()
   end

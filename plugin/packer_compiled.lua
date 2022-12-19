@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/seti/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/seti/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/seti/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
