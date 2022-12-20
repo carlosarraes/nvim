@@ -1,12 +1,12 @@
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
 end
 
 -- Autocommand that reloads neovim on save (this file)
@@ -19,53 +19,58 @@ vim.cmd([[
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function(use)
-  use('wbthomason/packer.nvim')
-  use('nvim-lua/plenary.nvim')
+return require("packer").startup(function(use)
+	use("wbthomason/packer.nvim")
+	use("nvim-lua/plenary.nvim")
 
-  -- Theme
-  use('bluz71/vim-nightfly-guicolors')
+	-- Theme
+	use("bluz71/vim-nightfly-guicolors")
 
-  -- Tmux & window navigation
-  use('christoomey/vim-tmux-navigator')
-  use('szw/vim-maximizer')
+	-- Tmux & window navigation
+	use("christoomey/vim-tmux-navigator")
+	use("szw/vim-maximizer")
 
-  -- Essentials
-  use('tpope/vim-surround') -- Surrond like vs-code
-  use('vim-scripts/ReplaceWithRegister') -- Use register for replacement grw
-  use('numToStr/Comment.nvim') -- Comment line
-  use('kyazdani42/nvim-web-devicons') -- Icons
-  
-  -- Lualine
-  use('nvim-lualine/lualine.nvim')
+	-- Essentials
+	use("tpope/vim-surround") -- Surrond like vs-code
+	use("vim-scripts/ReplaceWithRegister") -- Use register for replacement grw
+	use("numToStr/Comment.nvim") -- Comment line
+	use("kyazdani42/nvim-web-devicons") -- Icons
+	-- use("nvim-tree/nvim-tree.lua") -- Nvim Tree
 
-  -- Telescope
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
-  use('nvim-telescope/telescope-file-browser.nvim') -- Better view
+	-- Lualine
+	use("nvim-lualine/lualine.nvim")
 
-  -- Autocomplete
-  use("hrsh7th/nvim-cmp") -- completion plugin
-  use("hrsh7th/cmp-buffer") -- source for text in buffer
-  use("hrsh7th/cmp-path") -- source for file system paths
+	-- Telescope
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+	use("nvim-telescope/telescope-file-browser.nvim") -- Better view
 
-  -- Snippets
-  use("L3MON4D3/LuaSnip") -- snippet engine
-  use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-  use("rafamadriz/friendly-snippets") -- useful snippets
+	-- Autocomplete
+	use("hrsh7th/nvim-cmp") -- completion plugin
+	use("hrsh7th/cmp-buffer") -- source for text in buffer
+	use("hrsh7th/cmp-path") -- source for file system paths
 
-  -- Managing & Installing Lsp servers, Linters & Formatters
-  use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
-  use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+	-- Snippets
+	use("L3MON4D3/LuaSnip") -- snippet engine
+	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+	use("rafamadriz/friendly-snippets") -- useful snippets
 
-  -- Configuring Lsp Servers
-  use("neovim/nvim-lspconfig") -- easily configure language servers
-  use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-  use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
-  use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
-  use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
-  
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+	-- Managing & Installing Lsp servers, Linters & Formatters
+	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+
+	-- Configuring Lsp Servers
+	use("neovim/nvim-lspconfig") -- easily configure language servers
+	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+
+	-- formatting & linting
+	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)
