@@ -1,4 +1,4 @@
-local opt = vim.opt 
+local opt = vim.opt
 
 -- Line numbers
 opt.relativenumber = true
@@ -22,18 +22,17 @@ opt.cursorline = true
 
 -- Appearence
 opt.termguicolors = true
-opt.background = 'dark'
-opt.signcolumn = 'yes'
+opt.background = "dark"
+opt.signcolumn = "yes"
 
 -- Backspace
-opt.backspace = 'indent,eol,start'
+opt.backspace = "indent,eol,start"
 
 -- Clipboard
-opt.clipboard:append('unnamedplus')
+opt.clipboard:append("unnamedplus")
 
 -- Split windows
 opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
-
