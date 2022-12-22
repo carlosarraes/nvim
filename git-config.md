@@ -21,11 +21,11 @@ git config --global --edit
 [push]
   followTags = true
 [alias]
-	s = !git status -s
-	c = !git add --all && git commit -m
-	l = !git log --pretty=format:'%C(green)%cr: %C(blue)%cn -%C(cyan)%d %C(red)%h %C(white)%s'
-	r = !git rebase -i HEAD~2
-	amend = !git add --all && git commit --amend --no-edit
-	count = !git shortlog -s --grep
-	fp = !git push -u origin
+  s = !git status -s
+  c = !git add --all && git commit -m
+  l = !git log --pretty=format:'%C(green)%cr: %C(blue)%cn -%C(cyan)%d %C(red)%h %C(white)%s'
+  r = !git rebase -i HEAD~2
+  amend = !git add --all && git commit --amend --no-edit
+  count = !git shortlog -s --grep
+  fp = !git push -u origin
 ```
