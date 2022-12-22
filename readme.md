@@ -22,3 +22,15 @@ NVim configurado! :D
 - nvim-autopairs
 - nvim-ts-autotag
 - gitsigns
+
+## zsh
+
+Configurações do zsh adicionadas.
+
+## tmux
+
+Configurações do tmux adicionadas.
+
+## git
+
+Configurações do git adicionadas.
