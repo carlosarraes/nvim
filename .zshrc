@@ -106,10 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="nvim"
 alias vim="nvim"
-alias ctt="echo 'source ~/.bashrc' >> ~/.bash_profile"
 alias ls="exa -al --color=always --group-directories-first"
+alias ctt="echo 'source ~/.bashrc' >> ~/.bash_profile"
 alias bak="cp ~/.zshrc ~/.config/nvim/.zshrc && cp ~/.tmux.conf ~/.config/nvim/.tmux.conf"
-
+alias prettiercp="cp ~/.config/nvim/.prettierrc ."
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
