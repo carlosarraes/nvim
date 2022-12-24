@@ -35,7 +35,7 @@ return require("packer").startup(function(use)
 	use("vim-scripts/ReplaceWithRegister") -- Use register for replacement grw
 	use("numToStr/Comment.nvim") -- Comment line
 	use("kyazdani42/nvim-web-devicons") -- Icons
-	-- use("nvim-tree/nvim-tree.lua") -- Nvim Tree
+	use("nvim-tree/nvim-tree.lua") -- Nvim Tree
 
 	-- Lualine
 	use("nvim-lualine/lualine.nvim")
@@ -43,7 +43,6 @@ return require("packer").startup(function(use)
 	-- Telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
-	use("nvim-telescope/telescope-file-browser.nvim") -- Better view
 
 	-- Autocomplete
 	use("hrsh7th/nvim-cmp") -- completion plugin
