@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- General
-keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<C-s>", ":w<CR>")
 keymap.set("n", "<C-z>", "u")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -33,6 +32,7 @@ keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
+keymap.set("i", "<C-q>", "<C-o>zz")
 keymap.set("n", "<leader>p", "cw<C-r>0<ESC>")
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
