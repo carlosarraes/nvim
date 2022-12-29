@@ -36,6 +36,7 @@ return require("packer").startup(function(use)
 	use("numToStr/Comment.nvim") -- Comment line
 	use("kyazdani42/nvim-web-devicons") -- Icons
 	use("nvim-tree/nvim-tree.lua") -- Nvim Tree
+	use("norcalli/nvim-colorizer.lua") -- colors
 
 	-- Lualine
 	use("nvim-lualine/lualine.nvim")
