@@ -35,6 +35,7 @@ keymap.set("n", "N", "Nzzzv")
 keymap.set("i", "<C-q>", "<C-o>zz")
 keymap.set("n", "<leader>p", "cw<C-r>0<ESC>")
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+keymap.set("v", "<leader>/", "<esc>/\\%V") -- search within selection
 
 ----------------------
 -- Plugin Keybinds
