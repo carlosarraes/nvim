@@ -6,7 +6,6 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "<C-s>", ":w<CR>", opts)
 keymap.set("n", "<C-z>", "u", opts)
 keymap.set("n", "<leader>nh", ":nohl<CR>", opts)
-keymap.set("n", "x", '"_x', opts)
 
 -- Increment/decrement numbers
 keymap.set("n", "<leader>=", "<C-a>", opts) -- increment
@@ -18,6 +17,7 @@ keymap.set("n", "<leader>sh", "<C-w>s", opts) -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=", opts) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>", opts) -- close current split window
 
+-- Tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
@@ -37,8 +37,13 @@ keymap.set("i", "<C-q>", "<C-o>zz", opts)
 keymap.set("n", "<leader>p", "cw<C-r>0<ESC>", opts)
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 keymap.set("v", "<leader>/", "<esc>/\\%V", opts) -- search within selection
+
+-- Clipboard/Yanks
 keymap.set("v", "<leader>y", '"+y', opts) -- Needs xclip (Arch)
 keymap.set("n", "<leader>y", '"+y', opts)
+keymap.set("v", "<leader>d", '"_d', opts)
+keymap.set("n", "<leader>d", '"_d', opts)
+keymap.set("n", "x", '"_x', opts)
 
 ----------------------
 -- Plugin Keybinds
