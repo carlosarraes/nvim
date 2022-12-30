@@ -4,6 +4,11 @@ if not lspconfig_status then
 	return
 end
 
+local status, util = pcall(require, "lspconfig/util")
+if not status then
+	return
+end
+
 -- import cmp-nvim-lsp plugin safely
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then
@@ -106,6 +111,23 @@ lspconfig["sumneko_lua"].setup({
 					[vim.fn.stdpath("config") .. "/lua"] = true,
 				},
 			},
+		},
+	},
+})
+
+lspconfig["gopls"].setup({
+	cmd = { "gopls", "serve" },
+	filetypes = { "go", "gomod" },
+	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+	settings = {
+		gopls = {
+			gopls = {
+				gofumpt = true,
+			},
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
 		},
 	},
 })
