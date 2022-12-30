@@ -38,6 +38,7 @@ keymap.set("n", "<leader>p", "cw<C-r>0<ESC>", opts)
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 keymap.set("v", "<leader>/", "<esc>/\\%V", opts) -- search within selection
 keymap.set("v", "<leader>y", '"+y', opts) -- Needs xclip (Arch)
+keymap.set("n", "<leader>y", '"+y', opts)
 
 ----------------------
 -- Plugin Keybinds
