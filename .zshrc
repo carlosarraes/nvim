@@ -108,7 +108,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias ls="exa -al --color=always --group-directories-first"
 alias ctt="echo 'source ~/.bashrc' >> ~/.bash_profile"
-alias bak="cp ~/.zshrc ~/.config/nvim/.zshrc && cp ~/.tmux.conf ~/.config/nvim/.tmux.conf"
+alias bak="cp ~/.zshrc ~/.config/nvim/.zshrc && cp ~/.tmux.conf ~/.config/nvim/.tmux.conf && cp ~/.config/polybar/config.ini ~/.config/nvim/polybar/ && cp ~/.config/polybar/launch.sh ~/.config/nvim/polybar/"
 alias prettiercp="cp ~/.config/nvim/.prettierrc ."
 alias lg='lazygit'
 
