@@ -121,13 +121,20 @@ lspconfig["gopls"].setup({
 	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
 	settings = {
 		gopls = {
-			gopls = {
-				gofumpt = true,
-			},
+			gofumpt = true,
 			analyses = {
 				unusedparams = true,
 			},
 			staticcheck = true,
+			codelenses = {
+				generate = true,
+				gc_details = true,
+				regenerate_cgo = true,
+				tidy = true,
+				upgrade_depdendency = true,
+				vendor = true,
+			},
+			usePlaceholders = true,
 		},
 	},
 })
