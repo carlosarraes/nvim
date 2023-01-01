@@ -1,4 +1,5 @@
 local opt = vim.opt
+local cmd = vim.cmd
 
 -- Line numbers
 opt.relativenumber = true
@@ -36,3 +37,4 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+cmd("set noswapfile")

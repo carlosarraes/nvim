@@ -24,7 +24,7 @@ keymap.set("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
 
 -- QoL
-keymap.set("n", "<leader>q", ":wq<CR>", opts)
+keymap.set("n", "<leader>q", ":q<CR>", opts)
 keymap.set("n", "<leader>Q", ":qa!<CR>", opts)
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
