@@ -25,6 +25,7 @@ return require("packer").startup(function(use)
 
 	-- Theme
 	use("bluz71/vim-nightfly-guicolors")
+	use("catppuccin/nvim")
 
 	-- Tmux & window navigation
 	use("christoomey/vim-tmux-navigator")
