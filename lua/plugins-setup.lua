@@ -38,6 +38,7 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons") -- Icons
 	use("nvim-tree/nvim-tree.lua") -- Nvim Tree
 	use("norcalli/nvim-colorizer.lua") -- colors
+	use({ "shortcuts/no-neck-pain.nvim", tag = "*" }) -- no neck pain
 
 	-- Lualine
 	use("nvim-lualine/lualine.nvim")

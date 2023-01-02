@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/seti/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["no-neck-pain.nvim"] = {
+    loaded = true,
+    path = "/home/seti/.local/share/nvim/site/pack/packer/start/no-neck-pain.nvim",
+    url = "https://github.com/shortcuts/no-neck-pain.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/seti/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
