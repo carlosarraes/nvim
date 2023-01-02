@@ -36,5 +36,6 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+-- QoL
 opt.iskeyword:append("-")
 cmd("set noswapfile")
