@@ -20,8 +20,6 @@ keymap.set("n", "<leader>sx", ":close<CR>", opts) -- close current split window
 -- Tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
 
 -- QoL
 keymap.set("n", "<leader>q", ":q<CR>", opts)
@@ -54,6 +52,12 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts) -- toggle split wind
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- toggle file explorer
+
+-- vim-tests
+keymap.set("n", "<leader>tt", ":TestFile<CR>", opts) -- run all tests in current file
+keymap.set("n", "<leader>tn", ":TestNearest<CR>", opts) -- run nearest test
+keymap.set("n", "<leader>tl", ":TestLast<CR>", opts) -- run last test
+keymap.set("n", "<leader>tf", ":TestSuite<CR>", opts) -- run test suite
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts) -- find files within current working directory, respects .gitignore
