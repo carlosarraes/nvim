@@ -1,10 +1,6 @@
 set fish_greeting
 set TERM "xterm-256color"
 
-function fish_user_key_bindigns
-  fish_vi_key_bindings
-end
-
 function theme
   set -U fish_color_normal cdd6f4
   set -U fish_color_command 89b4fa
