@@ -28,3 +28,5 @@ function theme
   set -U fish_pager_color_completion cdd6f4
   set -U fish_pager_color_description 6c7086
 end
+
+starship init fish | source
